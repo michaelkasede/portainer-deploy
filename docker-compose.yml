@@ -10,18 +10,19 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Paris
-      - URL=${URL}
+      - TZ=America/New_York
       - SUBDOMAINS=wildcard
       - VALIDATION=duckdns
       - DUCKDNS_TOKEN=${DUCKDNS_TOKEN}
+      - URL=magnumlab.duckdns.org
+      - EXTRA_DOMAINS=dash.magnumlab.duckdns.org
       #- DNSPLUGIN=cloudflare
       #- REAL_IP_FROM=cloudflare
       - EMAIL=${EMAIL}
       - SWAG_AUTORELOAD=true          # Highly recommended!
     volumes:
       - ./swag-config:/config
-      - ./cloudflare.ini:/config/dns-conf/cloudflare.ini:ro
+      - ./duckdns.ini:/config/dns-conf/duckdns.ini:ro
     ports:
       - "80:80"
       - "443:443"
