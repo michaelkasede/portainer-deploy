@@ -9,10 +9,10 @@ services:
       - PUID=1001
       - PGID=1001
       - TZ=America/New_York
-      - SUBDOMAINS=wildcard
       - VALIDATION=duckdns
       - DUCKDNS_TOKEN=${DUCKDNS_TOKEN}
       - URL=magnumlab.duckdns.org
+      - SUBDOMAINS=wildcard,dash
       #- DNSPLUGIN=cloudflare
       #- REAL_IP_FROM=cloudflare
       - EMAIL=${EMAIL}
