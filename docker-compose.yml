@@ -1,6 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json
-version: "3.8"
-
+---
 services:
   swag:
     image: lscr.io/linuxserver/swag:latest
@@ -15,14 +13,12 @@ services:
       - VALIDATION=duckdns
       - DUCKDNS_TOKEN=${DUCKDNS_TOKEN}
       - URL=magnumlab.duckdns.org
-      - EXTRA_DOMAINS=dash.magnumlabs.duckdns.org
       #- DNSPLUGIN=cloudflare
       #- REAL_IP_FROM=cloudflare
       - EMAIL=${EMAIL}
       - SWAG_AUTORELOAD=true          # Highly recommended!
     volumes:
       - ./swag-config:/config
-      - ./duckdns.ini:/config/dns-conf/duckdns.ini:ro
     ports:
       - "80:80"
       - "443:443"
