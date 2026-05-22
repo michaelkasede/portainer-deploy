@@ -15,7 +15,7 @@ services:
       - VALIDATION=duckdns
       - DUCKDNS_TOKEN=${DUCKDNS_TOKEN}
       - URL=magnumlab.duckdns.org
-      - EXTRA_DOMAINS=dash.magnumlab.duckdns.org
+      - EXTRA_DOMAINS=dash.magnumlabs.duckdns.org
       #- DNSPLUGIN=cloudflare
       #- REAL_IP_FROM=cloudflare
       - EMAIL=${EMAIL}
