@@ -13,9 +13,10 @@ services:
       - TZ=Europe/Paris
       - URL=${URL}
       - SUBDOMAINS=wildcard
-      - VALIDATION=dns
-      - DNSPLUGIN=cloudflare
-      - REAL_IP_FROM=cloudflare
+      - VALIDATION=duckdns
+      - DUCKDNS_TOKEN=${DUCKDNS_TOKEN}
+      #- DNSPLUGIN=cloudflare
+      #- REAL_IP_FROM=cloudflare
       - EMAIL=${EMAIL}
       - SWAG_AUTORELOAD=true          # Highly recommended!
     volumes:
@@ -33,7 +34,7 @@ services:
     image: portainer/portainer-ce:lts
     container_name: portainer
     command:
-      - "--trusted-origins=dash.kenitemr.com"
+      - "--trusted-origins=dash.magnumlab.duckdns.org"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
