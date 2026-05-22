@@ -19,6 +19,7 @@ services:
       - SWAG_AUTORELOAD=true          # Highly recommended!
     volumes:
       - ./swag-config:/config
+      - ./duckdns.ini:/config/dns-conf/duckdns.ini:ro
     ports:
       - "80:80"
       - "443:443"
