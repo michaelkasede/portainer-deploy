@@ -8,7 +8,7 @@ services:
     environment:
       - PUID=1001
       - PGID=1001
-      - TZ=America/New_York
+      - TZ=Etc/UTC
       - VALIDATION=duckdns
       - DUCKDNS_TOKEN=${DUCKDNS_TOKEN}
       - URL=magnumlab.duckdns.org
