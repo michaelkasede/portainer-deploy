@@ -20,7 +20,6 @@ services:
     volumes:
       - ./swag-config:/config
       - ./duckdns.ini:/config/dns-conf/duckdns.ini:ro
-      - wp_data:/var/www/html
     ports:
       - "80:80"
       - "443:443"
