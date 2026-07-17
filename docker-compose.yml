@@ -12,7 +12,7 @@ services:
       - VALIDATION=duckdns
       - DUCKDNS_TOKEN=${DUCKDNS_TOKEN}
       - URL=magnumlab.duckdns.org
-      - SUBDOMAINS=wildcard,dash
+      - SUBDOMAINS=wildcard,dash,www
       #- DNSPLUGIN=cloudflare
       #- REAL_IP_FROM=cloudflare
       - EMAIL=${EMAIL}
