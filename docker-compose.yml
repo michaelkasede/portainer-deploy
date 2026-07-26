@@ -51,3 +51,7 @@ networks:
 
 volumes:
   portainer_data:
+  uc_wp_data:
+    external: true
+  wp_data:
+    external: true
