@@ -21,7 +21,10 @@ services:
       - SWAG_AUTORELOAD=true          # Highly recommended!
     volumes:
       - ./swag-config:/config
-      #- ./duckdns.ini:/config/dns-conf/duckdns.ini:ro
+      - uc_wp_data:/var/www/ueccc:ro
+      - wp_data:/var/www/magnumlab:ro
+      # Duckdns API works for a single domain, With EXTRA_DOMAINS you need to use VALIDATION=http to get a cert for multiple domains.
+      #- ./duckdns.ini:/config/dns-conf/duckdns.ini:ro   
     ports:
       - "80:80"
       - "443:443"
