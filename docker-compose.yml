@@ -9,12 +9,12 @@ services:
       - PUID=1001
       - PGID=1001
       - TZ=Etc/UTC
-      #- VALIDATION=duckdns
-      #- DUCKDNS_TOKEN=${DUCKDNS_TOKEN}
+      - VALIDATION=duckdns
+      - DUCKDNSTOKEN=${DUCKDNSTOKEN}
       - URL=magnumlab.duckdns.org
-      - SUBDOMAINS=www,dash,ueccc,web
-      - EXTRA_DOMAINS=cyberopslab.duckdns.org,www.cyberopslab.duckdns.org,ueccc.duckdns.org,www.ueccc.duckdns.org
-      - VALIDATION=http
+      - SUBDOMAINS=www,dash,web
+      #- EXTRA_DOMAINS=cyberopslab.duckdns.org,www.cyberopslab.duckdns.org,ueccc.duckdns.org,www.ueccc.duckdns.org
+      #- VALIDATION=http
       #- DNSPLUGIN=cloudflare
       #- REAL_IP_FROM=cloudflare
       - EMAIL=${EMAIL}
