@@ -12,7 +12,7 @@ services:
       - VALIDATION=duckdns
       - DUCKDNSTOKEN=${DUCKDNSTOKEN}
       - URL=magnumlab.duckdns.org
-      - SUBDOMAINS=www,dash,web
+      - SUBDOMAINS=wildcard
       #- EXTRA_DOMAINS=cyberopslab.duckdns.org,www.cyberopslab.duckdns.org,ueccc.duckdns.org,www.ueccc.duckdns.org
       #- VALIDATION=http
       #- DNSPLUGIN=cloudflare
@@ -37,7 +37,7 @@ services:
     image: portainer/portainer-ce:lts
     container_name: portainer
     command:
-      - "--trusted-origins=dash.magnumlab.duckdns.org"
+      - "--trusted-origins=https://dash.magnumlab.duckdns.org"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
